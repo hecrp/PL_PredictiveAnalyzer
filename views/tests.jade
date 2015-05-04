@@ -15,7 +15,22 @@ html(lang ="en")
 		div
 			textarea#original(autofocus='', cols='72', rows='5', align='center')
 		br
-		
+		#mocha 
+		.hiddenTestElements
+			textarea#original(autofocus='', cols='80', rows='5') 
+			button#PARSE.mylink(type='button', value='parse') Parse
+			br 
+			pre#OUTPUT
+		script(src='/tests/chai.js')
+		script(src='/tests/mocha.js')
+		script(src='/tests/sinon-1.13.0.js')
+		script(src='/tests/blanket.js', data-cover-adapter='/tests/mocha-blanket.js')
+		script.mocha.setup('tdd')
+		script(src='js/pl0.js', data-cover='')
+		script(src='js/main.js', data-cover='')
+		script(src='./views/tests.js')
+		script.
+			mocha.run();
 
 		footer(id="footer")
 			div.navbar.navbar-default.navbar-fixed-bottom.footer-bar.text-center(style="color:white")
