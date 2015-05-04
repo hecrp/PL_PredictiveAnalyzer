@@ -1,0 +1,24 @@
+html(lang ="en")
+	head
+		title= Parser
+		meta(charset='UTF-8')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js')
+		link(href="/stylesheets/bootstrap.min.css", rel="stylesheet")
+		link(rel='stylesheet', href='/stylesheets/style.css', type='text/css')
+		script(src="/javascripts/main.js", type='text/javascript')
+		script(src="/javascripts/pl0.js", type='text/javascript')
+
+	body
+		div.landing-bar.container-fluid
+			h1(style='color:white; text-align:center') PL0-PEGJS
+		div
+			textarea#original(autofocus='', cols='72', rows='5', align='center')
+		br
+		
+
+		footer(id="footer")
+			div.navbar.navbar-default.navbar-fixed-bottom.footer-bar.text-center(style="color:white")
+				div.row
+					div.col-lg-12
+						h4a(href="/views/tests.html" style="color:white") Tests
