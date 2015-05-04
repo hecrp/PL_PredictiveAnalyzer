@@ -5,6 +5,17 @@ html(lang ="en")
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js')
 		link(href="/stylesheets/bootstrap.min.css", rel="stylesheet")
+		script(type='text/x-mathjax-config').
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] }
+      });
 		link(rel='stylesheet', href='/stylesheets/style.css', type='text/css')
 		script(src="/javascripts/main.js", type='text/javascript')
 		script(src="/javascripts/pl0.js", type='text/javascript')

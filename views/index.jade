@@ -14,6 +14,31 @@ html(lang ="en")
 		div.landing-bar.container-fluid
 			h1(style='color:white; text-align:center') PL0-PEGJS
 		div
+			|Esta es la gramática para nuestra práctica:
+			ol
+			li
+				|  $\Sigma = \{ ; =, ID, P, IF, THEN, <, >, <=, >=, ==, !=,  +, *, (, ), NUM \}$,
+			li
+				|  $V = \{ statements, statement, condition, expression, term, factor \}$
+			li
+				|  Productions:
+			ol
+			li
+				|  statements $ \rightarrow$ statement ';' statements $\vert$ statement
+			li
+				|   statement $ \rightarrow$ ID '=' expression $\vert$ P expression
+				|  $ \vert$ IF condition THEN statement
+			li
+				| condition $ \rightarrow$ expression ('=='|'!='|'<'|'<='|'>'|'>=') expression
+			li
+				|  expression $ \rightarrow$ term '+' expression $\vert$ term
+			li
+				|  term $ \rightarrow$ factor '*' term $\vert$ factor
+			li
+				|  factor $ \rightarrow$ '(' expression ')' $\vert$ ID $ \vert$ NUM
+			li
+				|  Start symbol: $statements$
+			br
 			textarea#original(autofocus='', cols='72', rows='5', align='center')
 		br
 		.loadfile
